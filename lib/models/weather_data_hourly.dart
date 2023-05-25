@@ -43,19 +43,11 @@ class Hourly {
         dt: json['dt'] as int?,
         temp: (json['temp'] as num?)?.round(),
         feelsLike: (json['feels_like'] as num?)?.toDouble(),
-        // pressure: json['pressure'] as int?,
         humidity: json['humidity'] as int?,
-        // dewPoint: (json['dew_point'] as num?)?.toDouble(),
         uvi: (json['uvi'] as num?)?.toDouble(),
-        // clouds: json['clouds'] as int?,
-        // visibility: json['visibility'] as int?,
-        // windSpeed: (json['wind_speed'] as num?)?.toDouble(),
-        // windDeg: json['wind_deg'] as int?,
-        // windGust: (json['wind_gust'] as num?)?.toDouble(),
         weather: (json['weather'] as List<dynamic>?)
             ?.map((e) => Weather.fromJson(e as Map<String, dynamic>))
             .toList(),
-        // pop: json['pop'] as int?,
       );
 
   Map<String, dynamic> toJson() => {

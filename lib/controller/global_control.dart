@@ -3,11 +3,10 @@ import 'package:get/get.dart';
 import 'package:weather_air_app/api/featch_weather.dart';
 import 'package:weather_air_app/models/weather_data.dart';
 
-
 class GlobalController extends GetxController {
   late String _unitString;
   late String _lang;
-  
+
   void updateUnitString(String unitString, String lang) {
     _unitString = unitString;
     _isLoading.value = true;
@@ -18,6 +17,7 @@ class GlobalController extends GetxController {
 
   final RxBool _isLoading = true.obs;
   final RxDouble _lattitude = 0.0.obs;
+  // ignore: non_constant_identifier_names
   final RxDouble _Longitude = 0.0.obs;
   final RxInt _currentIndex = 0.obs;
 
@@ -41,7 +41,6 @@ class GlobalController extends GetxController {
   Future<void> updateLocation() async {
     _isLoading.value = true;
     await getLocation();
-    print("get ok");
   }
 
   Future<void> getLocation() async {

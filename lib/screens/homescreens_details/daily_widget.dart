@@ -24,7 +24,7 @@ class DailyWidget extends StatelessWidget {
             alignment: Alignment.topLeft,
             child: Text(
               'next_day'.tr,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
           const SizedBox(

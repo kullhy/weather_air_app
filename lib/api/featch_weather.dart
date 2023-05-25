@@ -2,12 +2,10 @@ import 'dart:convert';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:weather_air_app/api/api_key.dart';
-
 import 'package:weather_air_app/models/air_main.dart';
 import 'package:weather_air_app/models/weather_daily_data.dart';
 import 'package:weather_air_app/models/weather_data_current.dart';
 import 'package:weather_air_app/models/weather_data_hourly.dart';
-
 import '../models/weather_data.dart';
 
 
@@ -37,7 +35,7 @@ class FeatchWeatherAPI {
   String apiUrl2(var lat, var lon) {
     String url;
     url =
-        "http://api.openweathermap.org/data/2.5/air_pollution?lat=$lat&lon=$lon&appid=b6adef308b3d93d1e934c43bd49d3800";
+        "http://api.openweathermap.org/data/2.5/air_pollution?lat=$lat&lon=$lon&appid=$apikey";
     return url;
   }
 
@@ -53,9 +51,5 @@ class FeatchWeatherAPI {
       AirData.fromjson(jsonString2),
     );
     return weatherData!;
-    // _weatherStreamController.add(weatherData!);
   }
-  // void dispose() {
-  //   _weatherStreamController.close();
-  // }
 }

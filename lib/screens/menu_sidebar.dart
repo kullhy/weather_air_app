@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:weather_air_app/contains/colors.dart';
-import 'package:weather_air_app/screens/introduce_screens.dart';
-import 'package:weather_air_app/screens/menu_details/info_screens.dart';
 
-import 'noti_setting_screens.dart';
+import 'package:weather_air_app/screens/menu_details/info_screens.dart';
 
 const List<Widget> units = <Widget>[Text('°C'), Text('°F'), Text('°K')];
 const List<Widget> lang = <Widget>[Text('Vi'), Text('En')];
@@ -85,9 +83,9 @@ class MenuSidebar extends StatelessWidget {
                         const SizedBox(
                           width: 10,
                         ),
-                        const Text(
-                          "Nhiệt độ",
-                          style: TextStyle(
+                        Text(
+                          'temp'.tr,
+                          style: const TextStyle(
                               color: primaryTextColor,
                               fontSize: 14,
                               fontWeight: FontWeight.bold),
@@ -122,14 +120,14 @@ class MenuSidebar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.notifications),
                       SizedBox(
                         width: 10,
                       ),
                       Text(
-                        "Thông báo hàng ngày",
+                        'noti'.tr,
                         style: TextStyle(
                             color: primaryTextColor,
                             fontSize: 14,
@@ -161,9 +159,9 @@ class MenuSidebar extends StatelessWidget {
                         const SizedBox(
                           width: 10,
                         ),
-                        const Text(
-                          "Ngôn Ngữ",
-                          style: TextStyle(
+                        Text(
+                          'lang'.tr,
+                          style: const TextStyle(
                               color: primaryTextColor,
                               fontSize: 14,
                               fontWeight: FontWeight.bold),
@@ -208,16 +206,16 @@ class MenuSidebar extends StatelessWidget {
                         builder: (context) => const IntroduteScreens()),
                   );
                 },
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.info_rounded),
-                    SizedBox(
+                    const Icon(Icons.info_rounded),
+                    const SizedBox(
                       width: 10,
                     ),
                     Text(
-                      "Giới thiệu",
-                      style: TextStyle(
+                      'info'.tr,
+                      style: const TextStyle(
                           color: primaryTextColor,
                           fontSize: 14,
                           fontWeight: FontWeight.bold),
